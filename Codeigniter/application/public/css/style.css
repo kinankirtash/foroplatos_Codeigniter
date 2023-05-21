@@ -1,0 +1,621 @@
+@font-face {
+    font-family: OverRainbow;
+    src: url("../assets/tipografías/Over_the_Rainbow/OvertheRainbow-Regular.ttf");
+}
+
+@font-face {
+    font-family: Lato;
+    src: url("../assets/tipografías/Lato/Lato-Regular.ttf");
+}
+
+:root {
+    --light-bg: #F8F8FFFF;
+    --transp-bg: rgba(248, 248, 255, 0.75);
+    --prinicipal-brown: #986417FF;
+    --pseudoBlack: #4E4D4B;
+    --principal-green: #C7D41C;
+    --light-green: #F8FAE3;
+    --pink-resalt: #F8B9F2;
+    --light-pink: rgba(238, 207, 235, 0.9);
+    --transp-pink: rgba(255, 164, 240, 0.5);
+    --dark-green: #919567;
+    --trasnparent-White: rgba(242, 246, 228, .4);
+    --red: rgb(105, 1, 1);
+}
+
+/* Reset */
+html, button, iframe, input, hr, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, a:hover, a:visited, button, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-decoration: none;
+    background: transparent;
+}
+
+/*Modo de scroll*/
+html {
+    scroll-behavior: smooth;
+}
+
+.recibidor {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../assets/deco_documento/fondoLogo.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/*Flecha*/
+.bajar {
+    width: 5em;
+    height: 5em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.arrow {
+    position: fixed;
+    width: 5em;
+    height: 5em;
+    top: 655px;
+}
+
+.recibidor:has(.bajar:hover) {
+    transition: background .3s .1s;
+    background-image: url("../assets/deco_documento/fondoLogo2.png");
+}
+
+.bajar:hover {
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.bajar:hover .arrow {
+    width: 5.05em;
+    height: 5.05em;
+}
+
+.bajar:focus > .arrow {
+    width: 5em;
+    height: 5em;
+}
+
+
+.contenido:hover .tituloInfo {
+    opacity: 1;
+}
+
+.contenido:hover .titulo {
+    font-size: 32px;
+}
+
+.contenido:hover .Info {
+    background-color: var(--light-bg);
+    font-weight: bold;
+}
+
+.iconos a {
+    text-align: center;
+    text-decoration: none;
+}
+
+.iconos a:hover .borde {
+    color: var(--pink-resalt);
+    border-radius: 10px;
+}
+
+.instagram {
+    width: 16%;
+    opacity: .5;
+}
+
+.instagram:hover {
+    opacity: 1;
+}
+
+.facebook {
+    width: 15%;
+    opacity: .5;
+}
+
+.facebook:hover {
+    opacity: 1;
+}
+
+.borde {
+    border: double var(--light-pink) 2px;
+    padding: 3%;
+    color: var(--light-bg);
+    border-radius: 10px;
+}
+
+
+/*Tengo q encontrar q es esto*/
+.blanco {
+    border: solid var(--pseudoBlack) 2px;
+    color: var(--pseudoBlack);
+}
+
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: var(--transp-pink);
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 2px solid var(--principal-green);
+    border-radius: 5px;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.inicio_Sesion {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-items: center;
+}
+
+.formulario {
+    font-family: Lato;
+    background: var(--transp-bg);
+    padding: 20px;
+    margin: 2px;
+    border: solid var(--principal-green) 3px;
+    border-radius: 15px;
+    color: var(--pseudoBlack);
+    width: 50%;
+}
+
+.enviar {
+    font-family: Lato;
+    background-color: var(--light-green);
+    border: solid var(--pink-resalt) 2px;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 15px;
+    width: 15%;
+    cursor: pointer;
+}
+
+.enviar:hover {
+    padding: 16px;
+}
+
+.lista {
+    position: relative;
+    top: 5em;
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+.lista td {
+    height: 2em;
+    width: 2em;
+    padding: 5px;
+    text-align: center;
+}
+
+.seccion {
+    border: solid var(--prinicipal-brown) 5px;
+}
+
+.titulos {
+    background: var(--light-green);
+    font-family: OverRainbow;
+    font-weight: bold;
+    color: var(--pink-resalt);
+}
+
+#tlf::before {
+    content: "+";
+    font-weight: bold;
+}
+
+@media screen and (max-width: 569px) {
+    .logoFusion {
+        display: none;
+    }
+
+    /*Flecha*/
+    .recibidor {
+        display: grid;
+    }
+
+    /*Contenido*/
+    .grid {
+        position: relative;
+        display: grid;
+        grid-template-columns:100%;
+    }
+
+    .contenido {
+        height: 90vh;
+        grid-row: 1;
+        background-image: url("../assets/deco_documento/fondo_cafe.png");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tituloInfo {
+        background-image: url("../assets/deco_documento/dibujo_Patipatu.png");
+        opacity: 0.6;
+        position: relative;
+        top: 2%;
+        left: 9%;
+        width: 82%;
+        height: 10%;
+        background-position: center center;
+        background-size: 100% 100%;
+    }
+
+    .titulo {
+        color: var(--prinicipal-brown);
+        font-family: OverRainbow;
+        text-align: center;
+        position: relative;
+        font-size: 30px;
+        font-weight: bolder;
+        text-shadow: black;
+        top: 11%;
+        z-index: 499;
+    }
+
+    .Info {
+        top: 2%;
+        background-color: var(--trasnparent-White);
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        justify-items: center;
+        width: 76%;
+
+        padding: 3%;
+        color: var(--pseudoBlack);
+        text-align: justify;
+        font-size: 130%;
+    }
+
+    .rightStandar {
+        background: none;
+        position: absolute;
+        display: grid;
+        top: 85%;
+        height: 20px;
+    }
+
+    .iconos {
+        margin: 5%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 5%;
+        grid-column-gap: 2%;
+    }
+
+    .iconos a div {
+        color: var(--pseudoBlack);
+        background-color: var(--light-green);
+        text-decoration: none;
+    }
+
+    .iconos a img {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .find {
+        grid-column: 1;
+    }
+
+    .inst {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .contenido3 .Info {
+        top: 10vh;
+        background: none;
+    }
+
+    .marron {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 570px) and (max-width: 1023px) {
+
+    /*Flecha*/
+    .recibidor {
+        display: grid;
+    }
+
+    /*Contenido*/
+    .grid {
+        position: relative;
+        display: grid;
+        grid-template-columns:100%;
+    }
+
+    .contenido {
+        height: 75vh;
+        grid-row: 1;
+        background-image: url("../assets/deco_documento/fondo_cafe.png");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenido3 {
+        grid-row: 1;
+    }
+
+    .contenido .tituloInfo {
+        background-image: url("../assets/deco_documento/dibujo_Patipatu.png");
+        opacity: 0.6;
+        position: relative;
+        top: 5%;
+        left: 9%;
+        width: 82%;
+        height: 10%;
+        background-position: center center;
+        background-size: 100% 100%;
+    }
+
+    .titulo {
+        color: var(--prinicipal-brown);
+        font-family: OverRainbow;
+        text-align: center;
+        position: relative;
+        font-size: 30px;
+        font-weight: bolder;
+        text-shadow: black;
+        top: 13%;
+        z-index: 499;
+    }
+
+    .contenido .Info {
+        top: 5%;
+        background-color: var(--trasnparent-White);
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        justify-items: center;
+        width: 76%;
+
+        padding: 3%;
+        color: var(--pseudoBlack);
+        text-align: justify;
+        font-size: 135%;
+    }
+
+
+    .rightStandar {
+        background-color: var(--principal-green);
+        background: linear-gradient(90deg, var(--principal-green) 0%, var(--pseudoBlack) 100%);
+        display: grid;
+        grid-template-columns:20% 80%;
+        align-content: space-around;
+    }
+
+    .iconos {
+        margin: 5%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 5%;
+        grid-column-gap: 2%;
+    }
+
+    .iconos a img {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .logoFusion {
+        position: relative;
+        top: 10%;
+        width: 75%;
+    }
+
+    /*Info find us*/
+    /*Mapa*/
+    .contenido4 .titulo {
+        position: absolute;
+        font-size: 2vh;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        margin-left: 1%;
+    }
+
+    .contenido3 .Info {
+        position: relative;
+        top: 5vh;
+        height: 20vh;
+        text-align: center;
+    }
+
+    .contactInfo {
+        width: 45%;
+        padding: 1%;
+        border: solid var(--light-bg) 2px;
+        border-radius: 5px;
+        color: var(--light-bg);
+        opacity: .5;
+    }
+
+    .contacto {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .contactInfo:hover {
+        opacity: 1;
+    }
+
+    .marron {
+        background: linear-gradient(90deg, var(--prinicipal-brown) 0%, var(--pseudoBlack) 100%);
+        position: relative;
+        top: 50vh;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    /*SECCIONES*/
+    .grid {
+        position: relative;
+        display: grid;
+        grid-template-columns:35% 65%;
+    }
+
+    .rightStandar {
+        background-color: var(--principal-green);
+        background: linear-gradient(180deg, var(--principal-green) 0%, var(--pseudoBlack) 100%);
+        position: relative;
+        height: 90vh;
+    }
+
+    /*CONTENIDO*/
+    .contenido {
+        background-image: url("../assets/deco_documento/fondo_cafe.png");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .tituloInfo {
+        background-image: url("../assets/deco_documento/dibujo_Patipatu.png");
+        opacity: 0.6;
+        position: relative;
+        left: 9%;
+        width: 82%;
+        height: 10%;
+        background-position: center center;
+        background-size: 100% 100%;
+    }
+
+    .titulo {
+        color: var(--prinicipal-brown);
+        font-family: OverRainbow;
+        text-align: center;
+        position: relative;
+        font-size: 30px;
+        font-weight: bolder;
+        text-shadow: black;
+        top: 7%;
+        z-index: 499;
+    }
+
+    .Info {
+        background-color: var(--trasnparent-White);
+        position: relative;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        justify-items: center;
+        width: 76%;
+        padding: 3%;
+        color: var(--pseudoBlack);
+        text-align: justify;
+        font-size: 2vw;
+    }
+
+    .iconos {
+        position: relative;
+        margin: 5%;
+        top: 80%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-row-gap: 15%;
+        grid-column-gap: 2%;
+    }
+
+    .iconos a img {
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .logoFusion {
+        position: absolute;
+        left: 10%;
+        top: 10%;
+        width: 75%;
+    }
+
+    /*Info find us*/
+    /*Mapa*/
+    .mapouter {
+        position: relative;
+        text-align: center;
+    }
+
+    .contenido3 .Info {
+        background: none;
+        position: relative;
+        margin-top: 5%;
+    }
+
+    .contactInfo {
+        border: solid var(--light-bg) 2px;
+        border-radius: 5px;
+        position: relative;
+        color: var(--light-bg);
+        margin: 20%;
+        top: 60%;
+        padding: 1%;
+        display: grid;
+        grid-auto-rows: minmax(30px, auto);
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 55%;
+        opacity: .5;
+    }
+
+    .contacto {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+
+    .contactInfo:hover {
+        opacity: 1;
+    }
+
+    /*Fondo Apartado encuentranos*/
+    .marron {
+        background: linear-gradient(0deg, var(--prinicipal-brown) 0%, var(--pseudoBlack) 100%);
+    }
+}

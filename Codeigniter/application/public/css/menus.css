@@ -1,0 +1,307 @@
+:root {
+    --light-bg: #F8F8FFFF;
+    --prinicipal-brown: #986417FF;
+    --pseudoBlack: #4E4D4B;
+    --principal-green: #C7D41C;
+    --light-green: #F8FAE3;
+    --pink-resalt: #F8B9F2;
+    --light-pink: rgba(238, 207, 235, 0.9);
+    --dark-green: #919567;
+    --trasnparent-White: rgba(242, 246, 228, .4);
+    --red: rgb(105, 1, 1);
+}
+
+/* Reset */
+html, iframe, input, hr, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, a:hover, a:visited, button, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    border-collapse: collapse;
+    border-spacing: 0;
+    text-decoration: none;
+}
+
+body {
+    padding-top: 96px;
+}
+
+.section {
+    width: 100%;
+}
+
+.grid_menus {
+    display: grid;
+    grid-template-columns: 100%;
+    width: 100%;
+}
+
+.listaMenu {
+    list-style-type: none;
+}
+
+.tipo {
+    margin: 2% 0 2% 5%;
+}
+
+.food {
+    padding-top: 2%;
+}
+
+.tipoPlato {
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.plato {
+    display: block;
+    border: solid var(--prinicipal-brown) 2px;
+    color: rgba(152, 100, 23, .5);
+    font-size: 200%;
+    height: 28.89vh;
+}
+
+h4 {
+    margin: 8% 0 0 2%;
+}
+
+.dulce {
+    float: right;
+    margin-right: 2%;
+}
+
+
+.bebidas {
+    background: linear-gradient(320deg, transparent, var(--light-bg)), url("../assets/deco_documento/limonada2.png");
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.platoDulce {
+    background: linear-gradient(90deg, transparent, var(--light-bg)), url("../assets/deco_documento/dulce.png");
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.salado {
+    background: linear-gradient(320deg, transparent, var(--light-bg)), url("../assets/deco_documento/salado.png");
+    background-position: center;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.productos {
+    display: grid;
+    margin: 5%;
+    grid-template-columns: 100%;
+    grid-auto-rows: minmax(100px, auto);
+    row-gap: 2%;
+}
+
+.buscar {
+    height: 10vh;
+    background-color: var(--dark-green);
+    border-radius: 40px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+}
+
+.tituloProducto {
+    color: var(--light-green);
+    margin-left: 20%;
+}
+
+.buscador {
+    width: 90%;
+    height: 50%;
+    color: var(--light-green);
+    background-color: transparent;
+    border-bottom: dashed var(--light-green) 2px;
+}
+
+.barraBusqueda {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    align-items: center;
+    justify-items: center;
+}
+
+.tablaProductos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(100px, 100px);
+    column-gap: 2%;
+    row-gap: 4%;
+    margin: 0 5% 0 5%;
+}
+
+.producto {
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    background-color: var(--dark-green);
+    color: var(--light-green);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+@media screen and (max-width: 569px) {
+    .plato:hover {
+        font-size: 197%;
+    }
+
+    .bebidas:hover {
+        color: var(--light-bg);
+        background: linear-gradient(320deg, transparent, var(--prinicipal-brown)), url("../assets/deco_documento/cafe.png");
+        background-position: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .salado:hover {
+        color: var(--light-bg);
+        background: linear-gradient(320deg, transparent, var(--red)), url("../assets/deco_documento/salado.png");
+        background-position: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .platoDulce:hover {
+        color: var(--pseudoBlack);
+        background: linear-gradient(90deg, transparent, var(--light-pink)), url("../assets/deco_documento/dulce.png");
+        background-position: center;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .plato:hover {
+        font-size: 197%;
+        color: var(--prinicipal-brown);
+    }
+
+    .encargos {
+        grid-template-columns:100%;
+    }
+
+    .productosImg {
+        display: none;
+    }
+
+    #eight {
+        background: url("../assets/deco_documento/pasteleria.png") no-repeat fixed center;
+        background-size: cover;
+    }
+
+    #seventh {
+        background: url("../assets/deco_documento/limonada2.png") no-repeat fixed center;
+        background-size: cover;
+    }
+
+    #nineht {
+        background: url("../assets/deco_documento/salado2.png") no-repeat fixed center;
+        background-size: cover;
+    }
+
+    .buscar {
+        opacity: .8;
+    }
+
+    .tablaProductos {
+        grid-template-columns: 100%;
+        grid-auto-rows: minmax(50px, 150px);
+        column-gap: 1%;
+        row-gap: 2%;
+        margin: 0 5% 0 5%;
+    }
+
+    .producto {
+        width: 90%;
+        opacity: .7;
+    }
+}
+
+@media screen and (min-width: 570px) and (max-width: 1023px) {
+    .plato:hover {
+        font-size: 197%;
+        color: var(--prinicipal-brown);
+    }
+
+    .encargos {
+        grid-template-columns:100%;
+    }
+
+    .productosImg {
+        display: none;
+    }
+
+    #eight {
+        background: url("../assets/deco_documento/pasteleria.png") no-repeat fixed center;
+        background-size: cover;
+    }
+
+    #seventh {
+        background: url("../assets/deco_documento/limonada2.png") no-repeat fixed center;
+        background-size: cover;
+    }
+
+    #nineht {
+        background: url("../assets/deco_documento/salado2.png") no-repeat fixed center;
+        background-size: cover;
+    }
+
+    .buscar {
+        opacity: .8;
+    }
+
+    .tablaProductos {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(90px, 100px);
+        column-gap: 1%;
+        row-gap: 2%;
+        margin: 0 5% 0 5%;
+    }
+
+    .producto {
+        width: 90%;
+        opacity: .7;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .plato:hover {
+        background-size: auto;
+        background-position: left;
+        font-size: 197%;
+        color: var(--prinicipal-brown);
+
+    }
+
+    .encargos {
+        grid-template-columns:70% 30%;
+    }
+
+    .bebidasImg {
+        background: linear-gradient(180deg, transparent, var(--pseudoBlack)), url("../assets/deco_documento/limonada2.png");
+        background-position: center;
+        background-size: 100% 100%;
+    }
+
+    .dulceImg {
+        background: linear-gradient(180deg, transparent, var(--pseudoBlack)), url("../assets/deco_documento/pasteleria.png");
+        background-position: center;
+        background-size: 100% 100%;
+    }
+
+    .saladoImg {
+        background: linear-gradient(180deg, transparent, var(--light-bg)), url("../assets/deco_documento/salado2.png");
+        background-position: center;
+        background-size: 100% 150%;
+    }
+}

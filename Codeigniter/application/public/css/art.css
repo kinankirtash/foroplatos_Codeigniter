@@ -1,0 +1,26 @@
+body {
+    padding-top: 96px;
+    background-color: var(--light-green);
+}
+
+.titulo {
+    color: var(--pink-resalt);
+    font-size: 45px;
+    font-weight: bold;
+    margin: 3% 0 3% 0;
+}
+
+#contenedor {
+    position: relative;
+    display: block;
+    margin: auto;
+    width: 75%;
+    min-height: 70vh;
+    padding: 0.1em;
+    border: var(--pseudoBlack) double 3px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+

@@ -1,0 +1,257 @@
+:root {
+    --light-bg: #F8F8FFFF;
+    --prinicipal-brown: #986417FF;
+    --pseudoBlack: #4E4D4B;
+    --principal-green: #C7D41C;
+    --light-green: #F8FAE3;
+    --pink-resalt: #F8B9F2;
+    --dark-green: #919567;
+}
+
+/* Reset */
+html, iframe, input, hr, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, a:hover, a:visited, button, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    border: none;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+    padding-top: 80px;
+}
+
+.formulario {
+    margin: 0 5% 0 5%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 2%;
+    row-gap: 2%;
+}
+
+
+.formulario2 {
+    margin: 0 2% 0 2%;
+    display: grid;
+    grid-auto-rows: minmax(50px, auto);
+    column-gap: 1%;
+    row-gap: 1%;
+}
+
+.comentarios {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 1%;
+    margin: 1%;
+}
+
+.formularioRecetas {
+    width: 90%;
+    height: 120%;
+}
+
+.tipoReceta {
+    display: grid;
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.verRecetasComentarios {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1%;
+}
+
+.botones {
+    margin: 0 5% 0 5%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    column-gap: 2%;
+    width: 230%;
+}
+
+.contenido3 {
+    background-color: var(--light-green);
+}
+
+.apartado {
+    background-color: var(--dark-green);
+    border-radius: 5px;
+    padding: 2%;
+    opacity: .7;
+}
+
+.apartado::placeholder {
+    color: var(--light-bg);
+    opacity: .9;
+    font-weight: bold;
+}
+
+.boton {
+    width: 50%;
+    height: 25%;
+    border-radius: 5px;
+    background-color: var(--dark-green);
+    color: var(--light-bg);
+}
+
+.botonComent {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    background-color: var(--dark-green);
+    color: var(--light-bg);
+}
+
+.userNameComent {
+    color: var(--dark-green);
+    background: var(--light-pink);
+}
+
+.boton:hover {
+    cursor: pointer;
+    background-color: var(--pink-resalt);
+}
+
+.tituloInfoForm {
+    background-image: url("../assets/deco_documento/dibujo_Patipatu.png");
+    opacity: 0.2;
+    position: relative;
+    left: 5%;
+    width: 90%;
+    height: 10%;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+.ver {
+    cursor: auto;
+}
+
+.ver:focus {
+    outline: none;
+}
+
+@media screen and (max-width: 570px) {
+    .contenido3 {
+        background: linear-gradient(180deg, transparent, var(--pseudoBlack)), url("../assets/deco_documento/cafe_cafetera.png");
+        background-size: cover;
+        background-attachment: fixed;
+        background-position: center;
+        height: 100vh;
+    }
+
+    .apartado {
+        background-color: var(--dark-green);
+        border-radius: 5px;
+        padding: 2%;
+        opacity: .7;
+    }
+
+    .titulo {
+        color: var(--light-bg);
+        position: relative;
+    }
+
+    .tituloInfoForm {
+        opacity: 0.5;
+        margin-bottom: 1%;
+    }
+
+    .botones {
+        margin-left: -.2%;
+        width: 100%;
+    }
+
+    .boton {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width: 570px) and (max-width: 1024px) {
+
+    .cafes {
+        background: linear-gradient(90deg, transparent, var(--pseudoBlack)), url("../assets/deco_documento/cafe_cafetera.png");
+        background-position: center;
+        background-size: cover;
+    }
+
+    .contenido3 {
+        background-color: var(--dark-green);
+        height: 75vh;
+    }
+
+    .apartado {
+        background-color: var(--light-pink);
+    }
+
+    .apartado::placeholder {
+        color: var(--light-bg);
+        opacity: .9;
+        font-weight: bold;
+    }
+
+    .boton {
+        width: 95%;
+        background-color: var(--pink-resalt);
+        color: var(--light-bg);
+    }
+
+    .boton:hover {
+        cursor: pointer;
+        color: var(--pseudoBlack);
+        background-color: var(--light-green);
+    }
+
+    .tituloInfoForm {
+        opacity: .5;
+    }
+
+    .titulo {
+        color: var(--pink-resalt);
+        position: relative;
+    }
+
+    .botones {
+        grid-column: 1;
+        grid-row: 5;
+    }
+
+    .formulario2 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .formulario {
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(100px, auto);
+        column-gap: 2%;
+        row-gap: 2%;
+    }
+
+    .formulario2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .encargos {
+        display: grid;
+        grid-template-columns:70% 30%;
+    }
+
+    .cafes {
+        background: linear-gradient(180deg, transparent, var(--light-bg)), url("../assets/deco_documento/cafe_cafetera.png");
+        background-position: center;
+        background-size: 150% 100%;
+    }
+
+
+}
